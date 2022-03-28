@@ -1,0 +1,5 @@
+
+bazel-bin
+bazel-fun_with_flags
+bazel-out
+bazel-testlogs
