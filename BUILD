@@ -1,5 +1,5 @@
 load("@bazel_skylib//rules:common_settings.bzl", "string_flag")
-load("defs.bzl", "format_flag_value")
+load("defs.bzl", "define_from_flag")
 
 cc_binary(
     name = "test",
@@ -7,7 +7,7 @@ cc_binary(
     deps = [":flag"],
 )
 
-format_flag_value(
+define_from_flag(
     name = "flag",
     value = ":foo",
 )

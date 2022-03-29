@@ -1,6 +1,6 @@
 load("@bazel_skylib//rules:common_settings.bzl", "BuildSettingInfo")
 
-def _format_flag_value_impl(ctx):
+def _define_from_flag_impl(ctx):
     return CcInfo(
         compilation_context = cc_common.create_compilation_context(
             defines = depset([
@@ -11,8 +11,8 @@ def _format_flag_value_impl(ctx):
         ),
     )
 
-format_flag_value = rule(
-    implementation = _format_flag_value_impl,
+define_from_flag = rule(
+    implementation = _define_from_flag_impl,
     attrs = {
         "value": attr.label(),
     },
