@@ -1,1 +1,6 @@
-build --flag_alias=foo=//:foo
+build:macos --action_env=CC=/opt/homebrew/opt/llvm@15/bin/clang
+build:macos --action_env=CXX=/opt/homebrew/opt/llvm@15/bin/clang++
+build:macos --host_action_env=CC=/opt/homebrew/opt/llvm@15/bin/clang
+build:macos --host_action_env=CXX=/opt/homebrew/opt/llvm@15/bin/clang++
+
+build --flag_alias=flag_name=//:flag_name
